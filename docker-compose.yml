@@ -1,0 +1,27 @@
+version: '2'
+services:
+
+    flutter:
+        image: flutter:1.0
+        volumes: 
+            - ${PWD}/app/:/workspace
+        working_dir: /workspace
+        command: /bin/sh -c "flutter packages get;flutter pub get;tail -f /dev/null"
+
+    adminer:
+        image: adminer:latest
+        restart: always
+        ports:
+            - "8080:8080"
+
+    postgres:
+        image: postgres:alpine
+        restart: always
+        ports:
+          - "5432:5432"
+        volumes:
+            - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+        environment:
+            POSTGRES_USER: 'root'
+            POSTGRES_PASSWORD: 'root'
+            POSTGRES_DB: 'copycrab'
