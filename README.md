@@ -7,4 +7,4 @@ The delivery food application
 
 - [GitHub Desktop](https://desktop.github.com/)  
 - [Visual Studio Code](https://code.visualstudio.com/download)
-- [Flutter SDK](https://flutter.dev/docs/get-started/install/windows)
+- [Docker](https://www.docker.com/products/docker-desktop)
