@@ -17,7 +17,7 @@
 
 	// The optional 'workspaceFolder' property is the path VS Code should open by default when
 	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
-	"workspaceFolder": "/workspace",
+	"workspaceFolder": "/workspace/app",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
@@ -28,7 +28,9 @@
 	"extensions": [
 		"dart-code.flutter", 
 		"kisstkondoros.vscode-gutter-preview",
-		"ms-vsliveshare.vsliveshare", 
+		"ms-vsliveshare.vsliveshare",
+		"coenraads.bracket-pair-colorizer-2",
+		"jeroen-meijer.pubspec-assist",
 	],
 
 	// Uncomment the next line if you want start specific services in your Docker Compose config.
