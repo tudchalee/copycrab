@@ -4,7 +4,7 @@ services:
     flutter:
         image: inregist/flutter:1.0
         volumes: 
-            - ${PWD}/app/:/workspace
+            - ./:/workspace
         working_dir: /workspace/app
         command: /bin/sh -c "flutter packages get;flutter pub get;tail -f /dev/null"
 
