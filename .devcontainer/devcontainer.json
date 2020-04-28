@@ -28,7 +28,6 @@
 	"extensions": [
 		"dart-code.flutter", 
 		"kisstkondoros.vscode-gutter-preview",
-		"ms-vsliveshare.vsliveshare",
 		"coenraads.bracket-pair-colorizer-2",
 		"jeroen-meijer.pubspec-assist",
 	],

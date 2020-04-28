@@ -6,13 +6,7 @@ services:
         volumes: 
             - ./:/workspace
         working_dir: /workspace/app
-        command: /bin/sh -c "flutter packages get;flutter pub get;tail -f /dev/null"
-
-    adminer:
-        image: adminer:latest
-        restart: always
-        ports:
-            - "8080:8080"
+        command: /bin/sh -c "flutter clean;flutter packages get;flutter pub get;tail -f /dev/null"
 
     postgres:
         image: postgres:alpine
