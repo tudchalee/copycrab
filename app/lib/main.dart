@@ -1,12 +1,24 @@
+import 'package:app/page/restaurant_list.dart';
 import 'package:flutter/material.dart';
 
 //TODO: change home_page.dart to <your_page>.dart
 import 'package:app/page/home_page.dart';
+import 'package:app/page/order_summary.dart';
+import 'package:app/page/customer_payment.dart';
+import 'package:app/page/fav_menu.dart';
+import 'package:app/page/new_menu.dart';
+import 'package:app/page/menu.dart';
+import 'package:app/page/new_promo.dart';
+import 'package:app/page/add_coupon.dart';
+
+import 'package:app/pong/pong_button.dart';
+
+import 'package:app/page/order_history.dart';
+
 
 void main() {
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,7 +32,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 class HOME extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -43,48 +54,92 @@ class HOME extends StatelessWidget {
               },
             ),
             RaisedButton(
-              child: Text('Page1'),
+              child: Text('Favourite Menu'),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondRoute()),
+                  MaterialPageRoute(builder: (context) => Favourite()),
                 );
               },
             ),
             RaisedButton(
-              child: Text('Page2'),
+              child: Text('Order Summary'),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondRoute()),
+                  MaterialPageRoute(builder: (context) => OrderSummary()),
                 );
               },
             ),
             RaisedButton(
-              child: Text('Page3'),
+              child: Text('New Menu'),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondRoute()),
+                  MaterialPageRoute(builder: (context) => NewMenu()),
                 );
               },
             ),
             RaisedButton(
-              child: Text('Page4'),
+              child: Text('New Promotion'),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondRoute()),
+                  MaterialPageRoute(builder: (context) => NewPromo()),
                 );
               },
             ),
             RaisedButton(
-              child: Text('Page5'),
+              child: Text('Current Menu'),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondRoute()),
+                  MaterialPageRoute(builder: (context) => MenuPage()),
                 );
+              },
+            ),
+            RaisedButton(
+              child: Text('Add Coupon'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AddCoupon()),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text('Customer Payment'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CustomerPayment()),
+              );
+              },),
+            RaisedButton(
+              child: Text('Order History'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => OrderHistory()),
+              );
+              },
+              ),
+            RaisedButton(
+              child: Text('Pong Button'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PongButtons()),
+              );
+              },
+            ),
+            RaisedButton(
+              child: Text('Restaurants'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SelectRestaurant()),
+              );
               },
             ),
           ],
@@ -93,7 +148,6 @@ class HOME extends StatelessWidget {
     );
   }
 }
-
 class SecondRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
